@@ -53,7 +53,7 @@ public class PayData {
     //Builder Pattern
 
     public static class PaymentBuilder{
-        private PayData data = new PayData();
+        private final PayData data = new PayData();
 
         public PaymentBuilder billingDate(LocalDate billingDate){
             data.billingDate = billingDate;

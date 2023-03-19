@@ -8,7 +8,7 @@ import java.util.Calendar;
 import java.util.Date;
 
 public class ExpiryDateCalculator {
-    private int payPerMonth = 10000;
+    private final int payPerMonth = 10000;
     public LocalDate calculatorExpiryDate(PayData payData){
         int addedMonths= payData.getPayAmount() / payPerMonth;
         if(addedMonths >= 10) addedMonths = addedMonths/10 * 12 + addedMonths % 10;
